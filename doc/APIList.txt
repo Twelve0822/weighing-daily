@@ -1,0 +1,95 @@
+取得第一个用户的信息
+    method：get
+    path：/api/first-user
+    request：
+    response：200
+    {
+  "userExisted": true,
+  "userId": null,
+  "name": null,
+  "lastWeight": null
+  "initialWeight"
+  "targetWeight"
+  "email"
+  "birthday"
+}
+
+提交用户信息
+    method：post
+    path：/api/user
+    request：{
+  "name": null,
+  "initialWeight"
+  "targetWeight"
+  "email"
+  "birthday"
+}
+    response：{
+  "userId": null,
+  "name": null,
+  "initialWeight"
+  "targetWeight"
+  "email"
+  "birthday"
+}
+
+记录一次体重信息
+    method：post
+    path：/api/record
+    request：{
+  "userId": true,
+  "dailyWeight": null,
+  "comment": null
+  "photoUrl": null
+}
+    response：201
+    {
+  "recordId"
+  "userId": true,
+  "postedTime": null,
+  "dailyWeight": null,
+  "comment": null
+  "photoUrl": null
+}
+
+搜索体重
+    method：get
+    path：/api/records
+    request：{
+  "dateFrom": true,
+  "dateTo": null
+}
+    response：200
+    [{
+  "recordId"
+  "userId": true,
+  "postedTime": null,
+  "dailyWeight": null,
+  "comment": null
+  "photoUrl": null
+}]
+
+修改最新一次体重
+    method：put
+    path：/api/record/{recordId}
+    request：{
+  "userId": true,
+  "dailyWeight": null,
+  "comment": null
+  "photoUrl": null
+}
+    response：200
+    {
+  "recordId"
+  "userId": true,
+  "postedTime": null,
+  "dailyWeight": null,
+  "comment": null
+  "photoUrl": null
+}
+
+删除信息
+    method：delete
+    path：/api/record/{recordId}
+    request：
+    response：204
