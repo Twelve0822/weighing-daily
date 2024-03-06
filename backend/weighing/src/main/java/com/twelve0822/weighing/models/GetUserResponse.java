@@ -1,16 +1,18 @@
 package com.twelve0822.weighing.models;
 
+import java.util.Date;
+
 import lombok.Data;
 
 @Data
-public class FirstUserResponse {
+public class GetUserResponse {
     private Boolean userExisted;
-    
     private Long userId;
     private String name;
-    private Float initialWeight;
-    private Float targetlWeight;
-    private Float lastWeight;
+    private Date birthday;
     private String email;
-    private String birthday;
+    private Integer initialHeight;
+    private Float initialWeight;
+    private Float targetWeight;
+    private Float lastWeight;
 }
