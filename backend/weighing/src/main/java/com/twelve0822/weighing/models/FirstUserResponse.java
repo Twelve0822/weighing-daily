@@ -8,5 +8,9 @@ public class FirstUserResponse {
     
     private Long userId;
     private String name;
+    private Float initialWeight;
+    private Float targetlWeight;
     private Float lastWeight;
+    private String email;
+    private String birthday;
 }
