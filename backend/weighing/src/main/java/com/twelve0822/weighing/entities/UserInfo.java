@@ -1,6 +1,6 @@
 package com.twelve0822.weighing.entities;
 
-import java.sql.Date;
+import java.util.Date;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -16,21 +16,22 @@ public class UserInfo {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long userId;
 
-    @Column(length=100, nullable=false, unique=true)
+    @Column(length = 100, nullable = false, unique = true)
     private String name;
 
-    @Column(nullable=false)
+    @Column(nullable = false)
     private Date birthday;
 
-    @Column(nullable=false)
-    private Float initialWeight;
-
-    @Column(nullable=false)
-    private Float targetWeight;
-
-    @Column(length=200)
+    @Column(length = 200)
     private String email;
 
-    @Column(nullable=false)
+    @Column(nullable = false)
     private Integer initialHeight;
+
+    @Column(nullable = false)
+    private Float initialWeight;
+
+    @Column(nullable = false)
+    private Float targetWeight;
+
 }

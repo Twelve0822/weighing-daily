@@ -1,6 +1,6 @@
 package com.twelve0822.weighing.entities;
 
-import java.security.Timestamp;
+import java.util.Date;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -16,19 +16,18 @@ public class DailyRecord {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long recordId;
 
-    @Column(nullable=false)
+    @Column(nullable = false)
     private Long userId;
 
-    @Column(length=100, nullable=false, unique=true)
-    private Timestamp postedTime;
+    @Column(length = 100, nullable = false, unique = true)
+    private Date postedTime;
 
-    @Column(nullable=false)
+    @Column(nullable = false)
     private Float dailyWeight;
 
-    @Column(length=1000, nullable=false)
+    @Column(length = 1000)
     private String comment;
 
-    @Column(length=200)
+    @Column(length = 200)
     private String photoUrl;
 }
-

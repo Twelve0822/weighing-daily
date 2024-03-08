@@ -1,11 +1,13 @@
 package com.twelve0822.weighing.repositories;
 
-import org.springframework.data.repository.CrudRepository;
-import org.springframework.data.repository.PagingAndSortingRepository;
-import org.springframework.data.rest.core.annotation.RepositoryRestResource;
+import java.util.Optional;
+
+import org.springframework.data.repository.ListCrudRepository;
+import org.springframework.stereotype.Repository;
 
 import com.twelve0822.weighing.entities.UserInfo;
 
-@RepositoryRestResource
-public interface UserInfoRepository extends PagingAndSortingRepository<UserInfo, Long>, CrudRepository<UserInfo,Long> {
+@Repository
+public interface UserInfoRepository extends ListCrudRepository<UserInfo, Long> {
+    Optional<UserInfo> findFirstByOrderByUserIdDesc();
 }
